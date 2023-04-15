@@ -4,13 +4,27 @@ const { type } = require('os');
 
 const app = express();
 
-app.get('/api/test/', async (req, res) => {
-  try {
-    console.log("the input text is " + req.query.input);
-    const responses = ["test"];
+const mysql = require('mysql');
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'sql square root!',
+  database: 'foragedb'
+});
 
-    // Return response as json
-    res.json(Array.from(responses));
+connection.connect(function(err) {
+  if (err) throw err;
+});
+
+
+app.get('/leaderboard', (req, res) => {
+  try {
+    var responses = [];
+    connection.query('SELECT * from users ORDER BY points DESC', (err, rows, fields) => {
+      if (err) throw err;
+      responses = rows;
+      res.json(Array.from(responses));
+    });
   }
   catch (error) {
     console.log("there is an error. error message is: " + error);
@@ -19,7 +33,8 @@ app.get('/api/test/', async (req, res) => {
 
 // A handler for any request that doesn't match the above requests
 app.get('*', (req, res) => {
-  console.log("the request format doesn't match what we want");
+   console.log(req.url);
+   console.log("the request format doesn't match what we want");
 });
 
 const port = process.env.PORT || 5000;
