@@ -14,6 +14,9 @@ const Layout = () => {
           <li>
             <Link to="/element">ElementOne</Link>
           </li>
+          <li>
+            <Link to="/form">PlantForm</Link>
+          </li>
         </ul>
       </nav>
       </div>
