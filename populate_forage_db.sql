@@ -1,6 +1,7 @@
 DROP SCHEMA IF EXISTS `foragedb`;
 CREATE SCHEMA IF NOT EXISTS `foragedb`;
 use `foragedb`;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'sql square root!';
 CREATE TABLE users (
     username VARCHAR(50),
     passwd VARCHAR(100),
