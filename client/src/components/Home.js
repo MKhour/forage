@@ -20,6 +20,11 @@ const Home = () => {
     // alert(fileName);
   }
 
+  function NewlineText(props) {
+    const text = props.text;
+    return text.split('\n').map(str => <h3 style={{color:'red'}}>{str}</h3>);
+  }
+
   const handleSubmit = (event) => {
     setResult("Loading...");
     setInvasiveDetails("");
@@ -56,13 +61,13 @@ const Home = () => {
           if(data.items[item].scientificName === result.results[0].species.scientificNameWithoutAuthor) {
             console.log(data.items[item].scientificName);
             // setIsInvasive(true);
-            setInvasiveDetails("This species is INVASIVE!");
+            setInvasiveDetails("This species is INVASIVE!\nThe vernacular name is " + data.items[item].vernacularName + "\nThe degree of establishment is " + data.items[item].degreeOfEstablishment + "\nThe taxon information can be found at " + data.items[item].taxonID);
             break;
           }
           // console.log(data.items.length);
           if(item == data.items.length - 1 && data.items[item].scientificName !== result.results[0].species.scientificNameWithoutAuthor) {
             // console.log(item);
-            setInvasiveDetails("This species is NOT invasive!");
+            setInvasiveDetails("\nThis species is NOT invasive!");
           }
         }
         // if(invasiveDetails === "") {
@@ -85,7 +90,7 @@ const Home = () => {
                   id="pltFile"
               />
           </label>
-          <img id='pltImg' src={fileName}/>
+          <img id='pltImg' src={fileName} alt=''/>
           <input type="submit" />
           </form>
         </div>
@@ -96,7 +101,8 @@ const Home = () => {
         {!isInvasive && 
           <h3>This species is not invasive!</h3>
         } */}
-        <h3>{invasiveDetails}</h3>
+        {/* <h3>{invasiveDetails}</h3> */}
+        <NewlineText text={invasiveDetails} />
     </div>
   )
 };
