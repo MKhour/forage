@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import '../styles/App.css';
+import '../styles/Leaderboard.css';
 
 class Leaderboard extends Component {
 
@@ -21,15 +22,18 @@ class Leaderboard extends Component {
     return (
       <div className="App">
         <Header />
-         {/* header */}
-        <div>
-          <h1>Leaderboard</h1>
-            <div>{this.state.users.map((user, index) => {
+        <h1>Leaderboard</h1>
+        <div id='tHead'>
+            <div id='silver'><p>{this.state.users[1].username}</p><p>{this.state.users[1].points}</p></div>
+            <div id='gold'><p>{this.state.users[0].username}</p><p>{this.state.users[0].points}</p></div>
+            <div id='bronze'><p>{this.state.users[2].username}</p><p>{this.state.users[2].points}</p></div>
+        </div>
+        <div id='tBody'>
+            {this.state.users.slice(3).map((user, index) => {
                 return (
-                <p>{user.username +": " + user.points}</p>
+                    <div className='tRow'><p>{user.username}</p><p>{user.points}</p></div>
                 )
             })}
-            </div>
         </div>
       </div>
     );

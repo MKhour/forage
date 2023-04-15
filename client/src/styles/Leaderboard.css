@@ -1,0 +1,80 @@
+#tHead {
+    width: 50%;
+    height: 150px;
+    /* background-color: black; */
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+#silver, #gold, #bronze {
+    display: inline-block;
+    width: 33.333333%;
+    font-size: 28px;
+}
+
+#silver p, #gold p, #bronze p{
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+
+#silver {
+    height: 80%;
+    background-color: silver;
+    border-style: solid;
+    border: 5 solid black;
+    border-bottom: 0;
+    border-right: 0;
+}
+#gold {
+    height: 100%;
+    background-color: gold;
+    border-style: solid;
+    border: 5 solid black;
+    border-bottom: 0;
+}
+#bronze {
+    height: 60%;
+    background-color: #CD7F32;
+    border-style: solid;
+    border: 5 solid black;
+    border-bottom: 0;
+    border-left: 0;
+}
+
+#tBody {
+    width: 50%;
+    margin: auto;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-style: solid;
+    border: 5 solid black;
+    /* border-top: 0; */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.tRow {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 24px;
+}
+
+.tRow:nth-child(even) {
+    background-color: lightgreen;
+}
+
+.tRow:nth-child(odd) {
+    background-color: ghostwhite;
+}
+.tRow:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
