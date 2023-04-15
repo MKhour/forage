@@ -29,9 +29,9 @@ CREATE TABLE relations (
 
 INSERT INTO achievements (achievement_name, achievement_description, icon_link)
 VALUES
-("Green Thumb", "Earn 25 points", ""),
-("Natural Explorer", "Earn 50 points", ""),
-("Eco-Friend", "Earn 100 points", ""); 
+("Green Thumb", "Earn 25 points", "icon1.png"),
+("Natural Explorer", "Earn 50 points", "icon2.png"),
+("Eco-Friend", "Earn 100 points", "icon3.png"); 
 
 INSERT INTO users (username, passwd, points)
 VALUES
