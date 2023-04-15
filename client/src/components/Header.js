@@ -1,3 +1,4 @@
+import React from "react";  
 import { Link } from "react-router-dom";
 import '../styles/App.css';
 
@@ -18,6 +19,9 @@ const Header = () => {
           </li>
           <li>
             <Link to="/leaderboard">Leaderboard</Link>
+          </li>
+          <li>
+            <Link to="/invasivedetection">InvasiveDetection</Link>
           </li>
         </ul>
       </nav>
