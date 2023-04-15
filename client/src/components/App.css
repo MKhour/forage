@@ -2,11 +2,19 @@
   text-align: center;
   font-family: "Courier New", monospace;
   width: 100%;
+  margin-bottom: 20px;
+  background-color: #FDD836;
 }
 
 h1 {
   font-weight: normal;
   font-size: 42px;
+}
+
+#title {
+  background-color: #04AA6D;
+  margin: auto;
+  padding: 50px;
 }
 
 .passwords {
@@ -36,4 +44,35 @@ h1 {
   min-height: 200px;
   min-width: 200px;
   margin: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  font-size: larger;
+  border-right: 1px solid #bbb;
+}
+
+/* li:last-child {
+  border-right: none;
+} */
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
 }

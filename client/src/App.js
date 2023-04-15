@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ElementOne from './components/ElementOne';
-import PlantForm from './components/PlantForm';
-import Layout from './components/Layout';
+import Home from './components/Home';
+import UserPage from './components/UserPage';
+import Leaderboard from './components/Leaderboard';
 
 class App extends Component {
   render() {
     return (
     <BrowserRouter>
           <Routes>
-              <Route path='/' element={<Layout />} />
-              <Route path='element' element={<ElementOne/>} />
-              <Route path='form' element={<PlantForm/>} />
+              <Route path='/' element={<Home />} />
+              <Route path='user' element={<UserPage/>} />
+              <Route path='leaderboard' element={<Leaderboard/>} />
           </Routes>
           {/* <Outlet /> */} 
       </BrowserRouter>

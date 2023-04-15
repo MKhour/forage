@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
+import './App.css';
 import { useState } from 'react';
 import Header from './Header';
-import './App.css';
 
-function PlantForm() {
+const Home = () => {
   const [fileName, setFileName] = useState("");
   const [result, setResult] = useState("");
 
@@ -51,6 +52,10 @@ function PlantForm() {
         <h3>{result}</h3>
     </div>
   )
-}
+};
 
-export default PlantForm;
+export default Home;
+
+
+
+

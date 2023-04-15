@@ -1,21 +1,21 @@
 import { Link } from "react-router-dom";
 import './App.css';
 
-const Layout = () => {
+const Header = () => {
   return (
     <>
     <div className="App">
-    <h1>Welcome to Forage</h1>
+        <h1 id='title'>Welcome to Forage</h1>
       <nav>
         <ul>
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/element">ElementOne</Link>
+            <Link to="/user">User Page</Link>
           </li>
           <li>
-            <Link to="/form">PlantForm</Link>
+            <Link to="/leaderboard">Leaderboard</Link>
           </li>
         </ul>
       </nav>
@@ -24,7 +24,7 @@ const Layout = () => {
   )
 };
 
-export default Layout;
+export default Header;
 
 
 
