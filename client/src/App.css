@@ -29,3 +29,14 @@ h1 {
 .more:active {
   background-color: #FFEFA9;
 }
+
+.card {
+  background-color: rgb(4, 170, 109, .3);
+  padding: 10px;
+  margin: 20px;
+  width: 40%;
+}
+
+.wrapper {
+  display: flex;
+}

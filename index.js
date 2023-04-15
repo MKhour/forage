@@ -31,6 +31,39 @@ app.get('/leaderboard', (req, res) => {
   }
 });
 
+app.get('/user', (req, res) => {
+  try {
+    var responses = [];
+    sql_query = 'SELECT * from users WHERE username = \'madelyn\'';
+    console.log(sql_query);
+    connection.query(sql_query, (err, rows, fields) => {
+      if (err) throw err;
+      responses = rows;
+      console.log(responses[0]);
+      res.json(Array.from(responses)[0]);
+    });
+  }
+  catch (error) {
+    console.log("there is an error. error message is: " + error);
+  }
+});
+
+app.get('/achievements', (req, res) => {
+  try {
+    var responses = [];
+    sql_query = 'SELECT * from relations JOIN achievements ON relations.achievement = achievements.achievement_name WHERE username = \'madelyn\'';
+    connection.query(sql_query, (err, rows, fields) => {
+      if (err) throw err;
+      responses = rows;
+      console.log(responses);
+      res.json(Array.from(responses));
+    });
+  }
+  catch (error) {
+    console.log("there is an error. error message is: " + error);
+  }
+});
+
 // A handler for any request that doesn't match the above requests
 app.get('*', (req, res) => {
    console.log(req.url);
