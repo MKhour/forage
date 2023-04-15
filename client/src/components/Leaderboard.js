@@ -1,5 +1,5 @@
 import Header from './Header';
-import './App.css';
+import '../styles/App.css';
 
 const Leaderboard = () => {
     return (

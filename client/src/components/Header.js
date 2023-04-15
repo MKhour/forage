@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
-import './App.css';
+import '../styles/App.css';
 
 const Header = () => {
   return (
     <>
     <div className="App">
-        <h1 id='title'>Welcome to Forage</h1>
+        <div id="banner">
+          <div id='title'><h1>Welcome to Forage</h1></div>
+        </div>
       <nav>
         <ul>
           <li>

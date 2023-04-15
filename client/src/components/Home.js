@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import './App.css';
+import '../styles/App.css';
 import { useState } from 'react';
 import Header from './Header';
 
@@ -39,6 +39,7 @@ const Home = () => {
   return (
     <div className="App">
         <Header />
+        <h1>Home</h1>
         <form onSubmit={handleSubmit} onChange={handleUpdate}>
         <label>Upload a plant picture:
             <input 

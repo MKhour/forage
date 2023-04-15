@@ -3,7 +3,6 @@
   font-family: "Courier New", monospace;
   width: 100%;
   margin-bottom: 20px;
-  background-color: #FDD836;
 }
 
 h1 {
@@ -12,9 +11,16 @@ h1 {
 }
 
 #title {
-  background-color: #04AA6D;
+  /* background-color: rgb(4, 170, 109); */
   margin: auto;
-  padding: 50px;
+  padding: auto;
+}
+
+#title h1 {
+  padding: 10px;
+  display:inline-block; 
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
 }
 
 .passwords {
@@ -60,10 +66,6 @@ li {
   border-right: 1px solid #bbb;
 }
 
-/* li:last-child {
-  border-right: none;
-} */
-
 li a {
   display: block;
   color: white;
@@ -75,4 +77,9 @@ li a {
 /* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: #111;
+}
+
+#banner {
+  background-image: linear-gradient(0deg, rgb(4, 170, 109, .3), rgb(4, 170, 109, .3)), url("../imgs/banner.png");
+  background-size:cover;
 }
