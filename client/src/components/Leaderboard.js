@@ -9,7 +9,6 @@ class Leaderboard extends Component {
     super(props);
     this.state = {users: []};
     this.getLeaderboardStats();
-    // value has to stay, it clears the text area so that a character is only added once
   }
 
   getLeaderboardStats = (inputs) => {

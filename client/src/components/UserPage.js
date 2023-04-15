@@ -1,15 +1,39 @@
-import React from "react";  
+import React, { Component } from 'react';
 import Header from './Header';
 import '../styles/App.css';
 
 
-const UserPage = () => {
-    return (
-    <div className="App">
-        <Header />
-        <h1>User Page</h1>
-    </div>
-    )
-}
+class UserPage extends Component {
 
-export default UserPage
+    constructor(props) {
+      super(props);
+      this.state = {user: null};
+      this.getUser();
+    }
+  
+    getUser = () => {
+      fetch('user/?user=madelyn')
+        .then(res => res.json())
+        .then(user => this.setState({ user }));
+    } 
+  
+    render() {
+      return (
+        <div className="App">
+          <Header />
+           {/* header */}
+          <div>
+            <h1>{this.state.user == null? "placeholder" : this.state.user.username}</h1>
+            <div>
+                <p>Your Points: {this.state.user == null? "placeholder" : this.state.user.points}</p>
+            </div>
+            <div>
+
+            </div>
+          </div>
+        </div>
+      );
+    }
+}
+  
+export default UserPage;  
