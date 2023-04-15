@@ -11,6 +11,7 @@ const Home = () => {
   // const [name, setName] = useState("");
   // const [isInvasive, setIsInvasive] = useState(false);
   const [invasiveDetails, setInvasiveDetails] = useState("");
+  var points = 0;
 
   const handleUpdate = (event) => {
     const input = document.getElementById('pltFile');
@@ -24,6 +25,10 @@ const Home = () => {
     const text = props.text;
     return text.split('\n').map(str => <h3 style={{color:'red'}}>{str}</h3>);
   }
+
+  const updateScores = (points) => {
+    fetch('update/?points=' + points);
+  } 
 
   const handleSubmit = (event) => {
     setResult("Loading...");
@@ -62,12 +67,24 @@ const Home = () => {
             console.log(data.items[item].scientificName);
             // setIsInvasive(true);
             setInvasiveDetails("This species is INVASIVE!\nThe vernacular name is " + data.items[item].vernacularName + "\nThe degree of establishment is " + data.items[item].degreeOfEstablishment + "\nThe taxon information can be found at " + data.items[item].taxonID);
+            if(data.items[item].degreeOfEstablishment.includes("C3")) {
+              points = 10;
+            }
+            else if(data.items[item].degreeOfEstablishment.includes("D2")) {
+              points = 15;
+            }
+            else {
+              points = 20;
+            }
+            updateScores(points);
             break;
           }
           // console.log(data.items.length);
           if(item == data.items.length - 1 && data.items[item].scientificName !== result.results[0].species.scientificNameWithoutAuthor) {
             // console.log(item);
             setInvasiveDetails("\nThis species is NOT invasive!");
+            points = 5;
+            updateScores(points);
           }
         }
         // if(invasiveDetails === "") {
