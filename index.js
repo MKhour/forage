@@ -64,6 +64,21 @@ app.get('/achievements', (req, res) => {
   }
 });
 
+app.post('/update', function(req, res){
+  var username=req.body.name;
+  var pointsToAdd=req.body.points;
+  sql_query = 'SELECT points from users WHERE username = \'madelyn\'';
+  const oldPoints = connection.query(sql_query, (err, rows, fields) => {
+      if (err) throw err;
+  });
+  console.log(oldPoints);
+  var newPoints=oldPoints+pointsToAdd;
+  connection.query("UPDATE users SET points=(?) where username=\"madelyn\"", newPoints, function(err, result){
+      if(err) throw err;
+          console.log("1 record inserted");
+      });
+});
+
 // A handler for any request that doesn't match the above requests
 app.get('*', (req, res) => {
    console.log(req.url);
