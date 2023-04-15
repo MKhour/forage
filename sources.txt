@@ -1,0 +1,8 @@
+Template App Setup:
+(new) https://github.com/dceddia/rando
+https://github.com/Joao-Henrique/React_Express_App_Medium_Tutorial
+
+ExpressJS:
+https://stackoverflow.com/questions/43464908/reactjs-connection-with-database
+https://expressjs.com/en/guide/routing.html
+https://expressjs.com/en/guide/database-integration.html

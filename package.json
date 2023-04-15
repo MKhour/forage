@@ -1,0 +1,25 @@
+{
+  "name": "forage",
+  "version": "1.0.0",
+  "description": "Protect our ecosystem by finding and removing invasive species.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MKhour/forage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MKhour/forage/issues"
+  },
+  "homepage": "https://github.com/MKhour/forage#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
