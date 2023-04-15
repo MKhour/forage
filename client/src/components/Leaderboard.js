@@ -1,21 +1,6 @@
-<<<<<<< HEAD
+import React, { Component } from 'react';
 import Header from './Header';
 import '../styles/App.css';
-
-const Leaderboard = () => {
-    return (
-    <div className="App">
-        <Header />
-        <h1>Leaderboard</h1>
-    </div>
-    )
-}
-
-export default Leaderboard
-=======
-import React, { Component } from 'react';
-import './App.css';
-import Header from './Header';
 
 class Leaderboard extends Component {
 
@@ -52,4 +37,3 @@ class Leaderboard extends Component {
 }
 
 export default Leaderboard;
->>>>>>> 53106eb (connected to backend in order to show leaderboard stats.)
