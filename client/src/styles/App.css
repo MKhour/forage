@@ -44,14 +44,6 @@ h1 {
   background-color: #FFEFA9;
 }
 
-#pltImg {
-  max-height: 500px;
-  max-width: 500px;
-  min-height: 200px;
-  min-width: 200px;
-  margin: 20px;
-}
-
 ul {
   list-style-type: none;
   margin: 0;

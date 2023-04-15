@@ -1,5 +1,6 @@
 import React from "react";  
 import '../styles/App.css';
+import '../styles/Home.css';
 import { useState } from 'react';
 import Header from './Header';
 import data from './USRIISv2Cleaned.json';
@@ -76,16 +77,18 @@ const Home = () => {
     <div className="App">
         <Header />
         <h1>Home</h1>
-        <form onSubmit={handleSubmit} onChange={handleUpdate}>
-          <label>Upload a plant picture:
+        <div id="formBox">
+          <form onSubmit={handleSubmit} onChange={handleUpdate}>
+          <label id="fileLabel">Upload a Picture:
               <input 
                   type="file"
                   id="pltFile"
               />
           </label>
+          <img id='pltImg' src={fileName}/>
           <input type="submit" />
-        </form>
-        <img id='pltImg' src={fileName}/>
+          </form>
+        </div>
         <h3>{result}</h3>
         {/* {isInvasive && 
           <h3>This species is invasive!</h3>
