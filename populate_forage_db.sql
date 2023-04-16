@@ -35,9 +35,9 @@ VALUES
 
 INSERT INTO users (username, passwd, points)
 VALUES
-("madelyn", "password", 25),
+("madelyn", "password", 60),
 ("jack", "password", 25),
-("sara", "password", 50),
+("sara", "password", 70),
 ("carlos", "password", 10),
 ("tina", "password", 0),
 ("devon", "password", 20),
@@ -46,6 +46,7 @@ VALUES
 INSERT INTO relations (username, achievement)
 VALUES
 ("madelyn", "Green Thumb"),
+("madelyn", "Natural Explorer"),
 ("jack", "Green Thumb"),
 ("sara", "Green Thumb"),
 ("sara", "Natural Explorer"); 

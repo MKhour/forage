@@ -8,7 +8,6 @@ import data from './USRIISv2Cleaned.json';
 const Home = () => {
   const [fileName, setFileName] = useState("");
   const [result, setResult] = useState("");
-  const [points, setPoints] = useState("");
   // const [name, setName] = useState("");
   // const [isInvasive, setIsInvasive] = useState(false);
   const [invasiveDetails, setInvasiveDetails] = useState("");
@@ -19,7 +18,6 @@ const Home = () => {
     setFileName(URL.createObjectURL(input.files[0]));
     setResult("");
     setInvasiveDetails("");
-    setPoints(25);
     // alert(fileName);
   }
 

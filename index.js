@@ -65,8 +65,7 @@ app.get('/achievements', (req, res) => {
 });
 
 app.post('/update', function(req, res){
-  var username=req.body.name;
-  var pointsToAdd=req.body.points;
+  var pointsToAdd=req.query.points;
   sql_query = 'SELECT points from users WHERE username = \'madelyn\'';
   const oldPoints = connection.query(sql_query, (err, rows, fields) => {
       if (err) throw err;
